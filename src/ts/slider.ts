@@ -2,6 +2,7 @@ export {};
 
 const descSwiper = new Swiper('.desc__slider', {
   slidesPerView: 1,
+  autoHeight: true,
   spaceBetween: 25,
   enabled: true,
   pagination: {

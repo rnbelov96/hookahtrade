@@ -1,20 +1,26 @@
-html p, li {
+html p,
+li {
   @media (max-width: 650px) {
     font-size: 16px !important;
   }
 }
 
-html h1, h2 {
+html h1,
+h2 {
   @media (max-width: 650px) {
     font-size: 22px !important;
   }
 }
 
+b {
+  font-weight: 600;
+}
+
 body {
   background-color: white;
-  color: black;
+  color: #030303;
   font-family: 'Montserrat', sans-serif;
-  line-height: normal;
+  line-height: 1.6;
 }
 
 main {
@@ -34,6 +40,25 @@ main {
   @media (max-width: 650px) {
     padding: 0;
     width: 300px;
+  }
+}
+
+.title {
+  font-size: 35px;
+  text-transform: uppercase;
+  line-height: 1.45;
+  font-weight: 500;
+
+  b {
+    font-weight: 700;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 22px;
   }
 }
 

@@ -1,21 +1,33 @@
 .button {
   @include reset-btn;
-  font-size: 25px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 1.6;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 7px;
-  padding-right: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-transform: uppercase;
   color: white;
   font-weight: 700;
-  background: linear-gradient(180deg, #ffa665 0%, #fc4f19 100%);
-  box-shadow: 0px 6px 0px #cb3300;
-  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    #ff0000 0%,
+    #ff3115 3.11%,
+    #fe5424 11.03%,
+    #fe8438 50.03%,
+    #fda446 81.89%,
+    #fdb74e 92.52%,
+    #fdcf58 100%
+  );
+  box-shadow: 0px 4px 0px #d55a12, 0px 23px 83px rgba(244, 197, 118, 0.7),
+    inset 0px -4px 10px rgba(255, 173, 87, 0.32),
+    inset 0px 4px 10px rgba(255, 211, 139, 0.75);
+  border-radius: 6px;
   width: 100%;
-  min-height: 92px;
+  max-width: 334px;
+  min-height: 100px;
   overflow: hidden;
   position: relative;
 
@@ -24,13 +36,24 @@
   }
 
   &:hover {
-    background: #fc4f19;
+    background: linear-gradient(
+      90deg,
+      #ff0000 0%,
+      #ff3115 3.11%,
+      #fe5424 11.03%,
+      #fe8438 50.03%,
+      #fda446 81.89%,
+      #fdb74e 92.52%,
+      #fdcf58 100%
+    );
+    box-shadow: 0px 4px 0px #d55a12;
+    border-radius: 6px;
   }
 
   &:active {
-    background: #cb3300;
+    background: #fe5424;
     box-shadow: none;
-    top: 6px;
+    top: 4px;
   }
 
   &::after {
