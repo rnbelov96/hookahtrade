@@ -17,6 +17,20 @@ const descSwiper = new Swiper('.desc__slider', {
   },
 });
 
+const shopsSwiper = new Swiper('.shops__slider', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.shops__slider-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.shops__slider-btn_next',
+    prevEl: '.shops__slider-btn_prev',
+  },
+});
+
 // const swiper = new Swiper('.slidersection__slider', {
 //   slidesPerView: 3,
 //   spaceBetween: 30,
