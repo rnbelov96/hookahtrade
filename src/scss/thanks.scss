@@ -6,6 +6,8 @@
 @import './base/global.scss';
 @import './components/modal.scss';
 @import './components/priv-policy.scss';
+@import './components/header.scss';
+@import './components/footer.scss';
 
 .thanks__html,
 .thanks__body {
@@ -13,7 +15,7 @@
 }
 
 .thanks__body {
-  // background-image: url('/src/img/bgs/thanks-bg.jpg');
+  background-image: url('/src/img/bgs/thanks-bg.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
@@ -45,4 +47,202 @@
 
 .thanks {
   flex: 1 0 auto;
+  overflow: hidden;
+  padding-top: 46px;
+  padding-bottom: 61px;
+
+  @media (max-width: 650px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.thanks__content {
+  max-width: 960px;
+}
+
+.thanks__title {
+  margin-bottom: 19px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 1.45;
+
+  @media (max-width: 1150px) {
+    font-size: 35px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 10px;
+  }
+
+  span {
+    color: $red;
+    font-weight: bold;
+  }
+}
+
+.thanks__subtitle {
+  padding-left: 40px;
+  position: relative;
+  color: $grey;
+  font-size: 19px;
+  margin-bottom: 37px;
+  max-width: 917px;
+
+  &::before {
+    width: 25px;
+    height: 15px;
+    @include bg;
+    background-image: url('/src/img/icons/desc-rings.svg');
+    position: absolute;
+    left: 0;
+    top: 8px;
+    content: '';
+  }
+
+  @include mobile-mb;
+
+  b {
+    color: white;
+  }
+}
+
+.thanks__time-box {
+  max-width: 653px;
+  margin-bottom: 33px;
+
+  @include mobile-mb;
+}
+
+.thanks__time-head {
+  padding-left: 59px;
+  padding-right: 19px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  position: relative;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 0;
+  background: linear-gradient(
+    90deg,
+    #27292a 0%,
+    #414345 6.48%,
+    #303233 22.4%,
+    #27292a 77.57%,
+    #1d1f20 100%
+  );
+  box-shadow: 0px 1px 8px rgba(34, 34, 34, 0.4),
+    0px 3px 28px rgba(34, 34, 34, 0.6),
+    inset -1px 1px 1px rgba(255, 255, 255, 0.1),
+    inset 1px -1px 1px rgba(255, 255, 255, 0.08);
+  border-radius: 10px 10px 0 0;
+
+  &::before {
+    width: 14px;
+    height: 14px;
+    @include bg;
+    background-image: url('/src/img/icons/time.svg');
+    position: absolute;
+    @include y-align;
+    left: 30px;
+    content: '';
+  }
+}
+
+.thanks__time-body {
+  padding-left: 30px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  padding-right: 19px;
+  margin-bottom: 0;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+}
+
+.thanks__time-note {
+  margin-bottom: 30px;
+  @include max-width(618px);
+  color: $grey;
+
+  b {
+    color: white;
+  }
+
+  @include mobile-mb;
+}
+
+.thanks__list {
+  display: flex;
+  gap: 15px 31px;
+  flex-wrap: wrap;
+  margin-bottom: 27px;
+
+  @include mobile-mb;
+}
+
+.thanks__item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.thanks__item-text {
+  margin-bottom: 0;
+  color: white;
+
+  @media (max-width: 650px) {
+    font-size: 15px !important;
+  }
+}
+
+.thanks__item-list {
+  display: flex;
+  align-items: center;
+  gap: 15px 23px;
+}
+
+.thanks__item-link {
+  @include bg;
+
+  &_2gis {
+    width: 74px;
+    height: 23px;
+    background-image: url('/src/img/icons/2gis-thanks.png');
+  }
+
+  &_zoon {
+    width: 71px;
+    height: 16px;
+    background-image: url('/src/img/icons/zoon.svg');
+  }
+
+  &_site {
+    width: 179px;
+    height: 18px;
+    background-image: url('/src/img/icons/logo.svg');
+  }
+}
+
+.thanks__slogan {
+  max-width: 492px;
+  margin-bottom: 29px;
+  color: white;
+  font-size: 24px;
+
+  @media (max-width: 650px) {
+    font-size: 20px !important;
+  }
+  
+  @include mobile-mb;
+}
+
+.thanks__back-link {
+  @include reset-link(#fe8438);
+  color: #fe8438;
 }

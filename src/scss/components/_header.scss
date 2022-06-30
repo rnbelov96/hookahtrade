@@ -2,6 +2,27 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
+  &_thanks {
+    background-color: white;
+
+    .header__text {
+      color: #030303;
+
+      b {
+        color: #030303;
+      }
+    }
+
+    .header__phone {
+      @include reset-link(#030303);
+      color: #030303;
+    }
+
+    .header__callback {
+      color: #030303;
+    }
+  }
+
   @media (max-width: 650px) {
     padding-top: 10px;
     padding-bottom: 10px;
