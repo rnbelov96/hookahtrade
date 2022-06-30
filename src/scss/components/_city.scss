@@ -1,0 +1,96 @@
+.city {
+  padding-top: 85px;
+  padding-bottom: 100px;
+  @include bg;
+  background-image: url('/src/img/bgs/city-bg.jpg');
+
+  @media (max-width: 1150px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.city__title {
+  margin-bottom: 36px;
+  @include max-width(842px);
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 1.45;
+
+  @media (max-width: 1150px) {
+    font-size: 35px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 10px;
+  }
+
+  span {
+    color: $red;
+    font-weight: bold;
+  }
+}
+
+.city__text {
+  padding-left: 40px;
+  position: relative;
+  color: $grey;
+  font-size: 19px;
+  margin-bottom: 48px;
+  max-width: 670px;
+
+  &::before {
+    width: 25px;
+    height: 15px;
+    @include bg;
+    background-image: url('/src/img/icons/desc-rings.svg');
+    position: absolute;
+    left: 0;
+    top: 8px;
+    content: '';
+  }
+
+  @include tablet-mb;
+  @include mobile-mb;
+
+  b {
+    color: white;
+  }
+}
+
+.city__note {
+  padding-left: 66px;
+  position: relative;
+  color: $grey;
+  margin-bottom: 56px;
+  max-width: 565px;
+
+  @include tablet-mb;
+  @include mobile-mb;
+
+  &::before {
+    width: 46px;
+    height: 40px;
+    @include bg;
+    background-image: url('/src/img/icons/city-icons.svg');
+    position: absolute;
+    left: 0;
+    @include y-align;
+    content: '';
+  }
+
+  b {
+    color: white;
+  }
+}
