@@ -21,6 +21,10 @@
 
 .footer__data {
   margin-bottom: 23px;
+
+  @media (max-width: 650px) {
+    font-size: 14px !important;
+  }
 }
 
 .footer__address {
@@ -36,6 +40,10 @@
     position: absolute;
     left: 0;
     @include y-align;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 14px !important;
   }
 }
 
@@ -61,6 +69,10 @@
   text-align: center;
   font-size: 16px;
   line-height: 1.6;
+
+  @media (max-width: 650px) {
+    font-size: 14px !important;
+  }
 }
 
 .footer__right-side {
@@ -90,6 +102,11 @@
   padding-left: 64px;
   position: relative;
 
+  @media (max-width: 650px) {
+    font-size: 14px !important;
+    padding-left: 46px;
+  }
+
   &::before {
     width: 44px;
     height: 42px;
@@ -99,5 +116,9 @@
     @include y-align;
     content: '';
     position: absolute;
+
+    @media (max-width: 650px) {
+      zoom: 0.7;
+    }
   }
 }
